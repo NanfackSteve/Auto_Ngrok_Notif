@@ -14,7 +14,7 @@ yellow='\e[33m'
 cian='\e[1;96m'
 nc='\e[0m'
 
-log_file=ngrok_twilio.log
+log_file=/home/sun/Documents/projets/Ngrok_Twilio/ngrok_twilio.log
 internet_status='Unknow'
 
 checkInternet() {
@@ -24,9 +24,10 @@ checkInternet() {
 
   # Check if we have I @IP
   ping -qc 4 8.8.8.8 >/dev/null 2>&1
+
   if [ $? -eq 2 ]; then
-    echo -ne "Not IP address ! exit \n"
-    exit 1
+    echo -ne "Not IP address ! \n" && echo -e "$(date +'%F %X') \tNo_IP_address \tError" >>$log_file
+    return
   fi
 
   # Check Percent of Packet Loss
@@ -71,7 +72,7 @@ launch_Ngrok() {
     ;;
 
   *)
-    echo -e " ${red}[ Error ] - Bad protocol${nc}"
+    echo -e " ${red}[ Error ] - Bad protocol${nc}\n"
     echo -e "$(date +'%F %X') \tStart_Ngrok \tError" >>$log_file
     exit 1
     ;;
