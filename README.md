@@ -2,11 +2,12 @@
 
 This repo contains script(s) to send (auto) email notification for ngrok tunnel <br/>
 
-[![PyPI](https://img.shields.io/pypi/v/yagmail.svg?style=flat-square)](https://pypi.python.org/pypi/yagmail/)
-[![PyPI](https://img.shields.io/pypi/pyversions/yagmail.svg?style=flat-square)](https://pypi.python.org/pypi/yagmail/)
+[![Chat on](https://img.shields.io/badge/Chat%20on-Telegram-blue)](https://t.me/Le_Sudo)
+[![PyPI](https://img.shields.io/pypi/v/yagmail.svg?style=flat)](https://pypi.python.org/pypi/yagmail/)
+[![PyPI](https://img.shields.io/pypi/pyversions/yagmail.svg?style=flat)](https://python.org)
 
-Final output <br/>
-<img src="result.png" alt="result" width="380" height="250" >
+output <br/>
+<img src="result.png" alt="result" width="410" height="280" >
 
 ## Pre-requise
 
