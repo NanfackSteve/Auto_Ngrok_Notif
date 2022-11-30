@@ -32,6 +32,6 @@ echo -e " ${cian}[ $link ]${nc}" && echo -e "$(date +'%F %X') \tGet_Pub_Link \tO
 
 # 4- Notifications
 
-echo -ne "Send a NOTIF...\t" # Using EMAIL
+echo -ne "Send an Email..\t" # Using EMAIL
 python3 -c "import yagmail; yagmail.SMTP(user='237programmer', oauth2_file='credentials.json').send(to='nanfacksteve7@gmail.com', subject='Ngrok Link', contents='${link}', attachments='ngrok_twilio.log')" 2>/dev/null
 if [ $? -eq 0 ]; then echo -e " ${green}[ OK ]${nc}\n" && echo -e "$(date +'%F %X') \tSend_Email  \tOK" >>$log_file; else echo -e " ${red}[ Fail ]${nc}\n" && echo -e "$(date +'%F %X') \tSend_Email  \tFail" >>$log_file; fi
