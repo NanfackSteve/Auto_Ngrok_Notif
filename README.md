@@ -2,7 +2,7 @@
 
 This repo contains script(s) to send (auto) email notification for ngrok tunnel <br/>
 
-[![Chat on](https://img.shields.io/badge/Chat%20on-Telegram-blue)](https://t.me/Le_Sudo)
+[![Chat on](https://img.shields.io/badge/Chat_on-Telegram-blue)](https://t.me/Le_Sudo)
 [![version](https://img.shields.io/badge/Version-1.2-green?style=flat)]()
 [![PyPI](https://img.shields.io/pypi/pyversions/yagmail.svg?style=flat)](https://python.org)
 
@@ -28,7 +28,7 @@ path='$HOME/Your/Directory/path'
 
 ## How to use ?
 
-<li>For automation (Launch when Starting Up your PC) paste this ligne in your <b>crontab</b></li>
+<li>For automation paste this ligne in your <b>crontab</b></li>
 
 ```
 @reboot /Your/script/path/auto_script.sh 2> /Your/log/path/cron_error.log
