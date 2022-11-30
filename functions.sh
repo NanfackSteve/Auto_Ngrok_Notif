@@ -1,21 +1,15 @@
 #!/bin/bash
 
-account_sid='AC110f745919950590585f599ee730b4f7'
-auth_token='4ddc1b1865148ecc9b5c14c7d969db37'
-
-available_number='+18655686002'
-your_number='+237693736932'
-
-link=''
+# Color's Message
 green='\e[1;32m'
 red='\e[1;31m'
-blue='\e[1;34m'
-yellow='\e[33m'
 cian='\e[1;96m'
 nc='\e[0m'
 
-log_file=/home/sun/Documents/projets/Ngrok_Twilio/ngrok_twilio.log
+# Variables
+log_file="$path"/ngrok_twilio.log
 internet_status='Unknow'
+link=''
 
 checkInternet() {
 

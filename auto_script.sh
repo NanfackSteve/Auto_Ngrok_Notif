@@ -1,6 +1,6 @@
 #!/bin/bash
-
-source /home/sun/Documents/projets/Ngrok_Twilio/functions.sh
+path=/home/sun/Documents/projets/Auto_Ngrok_Notif
+source $path/functions.sh
 
 # 0 - Chech args
 
@@ -30,9 +30,8 @@ done
 
 echo -e " ${cian}[ $link ]${nc}" && echo -e "$(date +'%F %X') \tGet_Pub_Link \tOK" >>$log_file
 
-# 4- Send SMS
+# 4- Notifications
 
-echo -ne "Send a NOTIF...\t"
-# response=$(curl -s -X POST -d "Body=Link - ${link}" -d "From=${available_number}" -d "To=${your_number}" \
-#     "https://api.twilio.com/2010-04-01/Accounts/${account_sid}/Messages" -u "${account_sid}:${auth_token}")
-echo -e " ${green}[ OK ]${nc}\n" # && echo -e "\n$response\n"
+echo -ne "Send a NOTIF...\t" # Using EMAIL
+python3 -c "import yagmail; yagmail.SMTP(user='237programmer', oauth2_file='credentials.json').send(to='nanfacksteve7@gmail.com', subject='Ngrok Link', contents='${link}', attachments='ngrok_twilio.log')" 2>/dev/null
+if [ $? -eq 0 ]; then echo -e " ${green}[ OK ]${nc}\n" && echo -e "$(date +'%F %X') \tSend_Email  \tOK" >>$log_file; else echo -e " ${red}[ Fail ]${nc}\n" && echo -e "$(date +'%F %X') \tSend_Email  \tFail" >>$log_file; fi
