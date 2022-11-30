@@ -1,6 +1,9 @@
 # Auto Ngrok Notification 
 
-This repo contains script(s) to send (auto) email notification for ngrok tunnel
+This repo contains script(s) to send (auto) email notification for ngrok tunnel <br/>
+
+[![PyPI](https://img.shields.io/pypi/v/yagmail.svg?style=flat-square)](https://pypi.python.org/pypi/yagmail/)
+[![PyPI](https://img.shields.io/pypi/pyversions/yagmail.svg?style=flat-square)](https://pypi.python.org/pypi/yagmail/)
 
 Final output <br/>
 <img src="result.png" alt="result" width="380" height="250" >
