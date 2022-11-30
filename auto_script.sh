@@ -1,5 +1,5 @@
 #!/bin/bash
-path=/home/sun/Documents/projets/Auto_Ngrok_Notif
+path=$HOME/Documents/projets/Auto_Ngrok_Notif
 source $path/functions.sh
 
 # 0 - Chech args
